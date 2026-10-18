@@ -1,0 +1,9 @@
+# Orrery
+
+Set the heavens turning. Orrery is a quiet puzzle about building something that works: a brass instrument beneath a dark sky, its arms carrying tiny suns and moons through a carefully composed dance. Each challenge begins with an empty hex field, a handful of reagents, and a constellation to make. The solution is yours to invent.
+
+Drag mechanisms onto the workbench, choose their reach, and engrave the field with transforming sigils. A rise supplies fresh material; a set waits for the exact finished shape. Between them, arms grab, swing, pivot, and release. Bind two moons together, borrow an essence from the zodiac wheel, separate light from shadow, or bring the four essences together as aether. A track can carry an entire mechanism to a new position, while a piston reaches beyond a fixed arm's grasp.
+
+Every arm reads its own instruction tape, but the whole machine shares one rhythm. Write a few commands, step through a cycle, and watch what happens. A promising arrangement can fail halfway through a turn when two motes come too close. The machine freezes at the mistake, giving you time to understand it. Stop, change a command, undo a placement, and try again. When every product has been delivered six times, your instrument has found its rhythm.
+
+The sixteen studies of Campaign lead from a first orbit through bonds, transmutation, and more elaborate machines. Extras opens ten independent workbenches from the start, including repeating constellations and the four-reagent Aetherfall. Finished machines remain available during your session, ready for another pass. Your best cost, cycle count, and occupied area are remembered separately: a smaller machine, a faster loop, and a more compact design are three different reasons to return to the same little patch of sky.

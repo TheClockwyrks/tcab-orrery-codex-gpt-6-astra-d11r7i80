@@ -1,110 +1,55 @@
-# Orrery — starter project
+# Orrery
 
-This repository is the starting point for building **Orrery**, the game the
-specification under `specs/` describes. Read `specs/overview.md` first; it says
-how the rest of the specification is organized.
+A celestial machine-building puzzle for the browser. Arrange brass arms and engraved sigils on a hex field, compose looping instruction tapes, and deliver six copies of every requested constellation without a collision.
 
-The project is already wired up. It builds on the **Simple 2D** engine, which
-is installed as an ordinary dependency and documents itself under `engine/` —
-read that alongside the specs. What is missing is the game, and the art and
-sound it plays.
+The game includes a sixteen-challenge Campaign, ten independent Extras, session records for cost / cycles / area, a five-page guide, and a direct-manipulation editor with unlimited undo and redo. Each challenge ships a verified reference machine accessible through the engine's debug API. References are intentionally not exposed as an in-game solve button.
 
-## What you own
+## Run locally
 
-**`src/game.ts`, and any new files you add beside it.**
+```sh
+npm ci
+npm run dev
+```
 
-Start by declaring and exporting `OrreryState`, exactly as `specs/state.md`
-fixes it, and `OrreryDebugApi`, the debug and automation surface
-`specs/instrumentation.md` specifies. The stub in `src/game.ts` is written
-against both names, so the project does not compile until they exist — a fresh
-workspace failing `npm run typecheck` is the starting point, not a broken seed.
+Open the local URL Vite prints. No service, account, or external asset host is needed.
 
-`src/game.ts` then exports `game`, a `Game<OrreryState, OrreryDebugApi>`: three
-functions over that state. `initialize` builds the state and the debug surface
-once and returns them together as `[state, debug]`; `update` takes the current
-state as a read-only view (`DeepReadonly<OrreryState>`, from `ts-essentials`)
-and returns the next state, advanced against the frame's delta time in seconds;
-and `render` is handed that next state, read-only again, and draws it. The
-engine holds the state by value and replaces it with whatever `update` returns,
-so a frame builds the next state from the current one rather than writing into
-it, and the type is what guarantees that rendering changes nothing. All three
-currently throw `"not implemented"`. Implement them.
+## Production
 
-**The pointer comes from the engine.** The machine is built with the pointer,
-and the engine hands the game its position already in logical stage units along
-with its press and release edges — read the engine's input documentation for
-the API. `specs/controls.md` and `specs/editor.md` state what Orrery does with
-the three of them.
+```sh
+npm ci
+npm run build
+npm run preview
+```
 
-The debug surface is a required deliverable. The engine returns it from
-`engine.debug` exactly as `initialize` handed it over, and that is how the game
-is driven from code, so it is present and exactly as
-`specs/instrumentation.md` specifies. Because nothing holds a writable state,
-its operations are written in the shape of `update`: a pose takes the current
-state and returns the next, and a caller applies it through
-`engine.apply((s) => debug.loadChallenge(s, challenge))`; a reading takes the
-state and returns what it read, as `debug.snapshot(engine.state)`. Nothing is
-published to the page.
+The complete static site is written to `dist/`. Serve that directory at a site root or under a sub-path. Asset URLs are relative to the page. The committed `public/assets` link exposes the produced `assets/` directory to Vite's static-file bundling; the build never invokes an asset-generation tool.
 
-`OrreryState` **is a contract**. Keep every field, under the name, type, and
-meaning `specs/state.md` gives it. You may add fields, but only for data you
-can rebuild from the declared ones: the declared fields are the whole of the
-authoritative state, and the surface's `reset()` restores exactly those.
+## Controls
 
-**You also produce every asset the game shows and plays.** Asset-generation
-tools are on your `PATH` while you build here. `specs/assets.md` is the
-contract: what to produce, which tool produces it, the path it lands at, and the
-bar it is held to. The finished files are committed to this repository and
-loaded through the engine's asset loader at runtime, and `npm run build` never
-invokes the tools.
+- **Menus:** arrows to choose, Enter to confirm, Escape to return; pointer and touch work too.
+- **Placement:** drag a part from the tray onto a hex. Drag an existing part to move it. Drag a track's open endpoint to extend or shorten its path.
+- **Field focus:** Q / E rotate; W / S change arm reach; X removes the selected part.
+- **Tape focus:** click a row or cell. G grabs, V drops, A / D rotate, Z / C pivot, W / S extend or retract, T / B advance or recede. Delete blanks a cell; Backspace blanks the preceding cell. R writes a reset; Y repeats the prefix. Arrow keys move the cursor.
+- **History:** U undoes, I redoes.
+- **Run:** Space starts or pauses, N steps one cycle, comma / period change speed, Escape stops the run and returns to editing.
+- **Sound:** M toggles mute. Backtick toggles the engine's diagnostic overlay.
 
-`@clockwyrks/particle-runtime` is already a dependency, vendored into this
-repository and resolved by a `file:` entry in `package.json`. It plays a
-produced `system.json` into a 2D drawing context — the one `render` receives.
-Import it like any other dependency.
+All progress and machines last for the current session. Reloading begins a new apprenticeship.
 
-Tests you write belong beside your sources as `src/**/*.test.ts`. `npm test`
-runs them in process, with coverage over `src/`. The engine's documentation
-carries a complete worked example of testing a game this way.
+## Verification
 
-## What you must not edit
+```sh
+npm run typecheck
+npm run lint
+npm run format
+npm test
+```
 
-- **`src/main.ts`** — the fixed entry point. It creates the engine over the
-  page's canvas, binds `game` to it, and runs.
-- **`src/constants.ts`** — every figure the specification fixes: the stage,
-  field, and editor geometry, the mote and part rosters, the costs, the
-  instruction set, the speeds, the action names and bindings, the cue names,
-  the produced-asset paths, and the screen copy. Read from it.
-- **`index.html`** — the page and the canvas the engine fits the stage into.
-- **The toolchain** — `package.json`, `tsconfig.json`, `vite.config.ts`,
-  `vitest.config.ts`, `eslint.config.js`, `.prettierrc.json`, `.prettierignore`,
-  and `.gitignore`.
-- **`.vendor/`** — the vendored engine and runtime libraries.
-- **`engine/`** — the engine's own documentation.
+Tests exercise every shipped reference machine, the collision sweep, frame partition independence, transformations, completion gates, editor history, validation, and the actual Simple 2D engine over a native canvas. Browser verification also exercises pointer placement, keyboard tape entry, audio loading, production assets, and sub-path hosting.
 
-Add dependencies to `package.json` if you genuinely need them, and commit the
-`package-lock.json` — the build is installed with `npm ci`. Leave the existing
-entries alone.
+## Source and assets
 
-## Commands
+`src/game.ts` declares the immutable state and binds the game to Simple 2D. Geometry, simulation, editor transitions, document validation, content, and presentation live in adjacent modules. The simulation samples the prescribed motion paths independently of rendering. The engine owns input, time, asset loading, audio, and diagnostics.
 
-- `npm run dev` — serves the game with hot reload.
-- `npm run build` — type-checks, then emits the static site into `dist/`.
-- `npm run preview` — serves `dist/` for a final check.
-- `npm run typecheck` — `tsc --noEmit`.
-- `npm run lint` — ESLint.
-- `npm run format` — Prettier, in check mode.
-- `npm test` — Vitest over `src/**/*.test.ts`, with coverage.
+All sprites were produced with `draw` and `draw-sheet`; effects with `particle-2d`; cues with `sfx-synth`; and the 32-second music bed with `music`. The PNGs, particle systems, WAVs, MIDI score, and production logs are committed in `assets/`. The game plays particle systems through `@clockwyrks/particle-runtime/canvas`.
 
-## Before you finish
-
-- `npm run build` produces `dist/` with `index.html` at its root, and that
-  directory runs as-is on any static host, at its root and under a sub-path.
-- `npm run typecheck`, `npm run lint`, `npm run format`, and `npm test` all
-  pass. The same four commands are run over the repository you leave behind.
-- The assets `specs/assets.md` asks for are produced and committed under
-  `assets/`, and the game loads them.
-- The `showcase/` directory `specs/showcase.md` asks for is present.
-- **Replace this file** with the `README.md` `specs/overview.md` asks the
-  finished build to ship: what the game is, how to install it, how to run it in
-  development, how to produce the production build, and the controls.
+`showcase/` contains captured frames and an engine-recorded, continuous editor-to-completion replay.

@@ -1,0 +1,72 @@
+[
+  {
+    "op": "add_voice",
+    "name": "tone0",
+    "wave": "sine",
+    "freq": 110.0,
+    "gain": -20.0,
+    "pan": 0.0,
+    "start_ms": 0.0,
+    "dur_ms": 650.0
+  },
+  {
+    "op": "add_voice",
+    "name": "tone1",
+    "wave": "sine",
+    "freq": 221.09999999999997,
+    "gain": -27.0,
+    "pan": 0.0,
+    "start_ms": 45.0,
+    "dur_ms": 650.0
+  },
+  {
+    "op": "add_voice",
+    "name": "tone2",
+    "wave": "sine",
+    "freq": 438.9,
+    "gain": -34.0,
+    "pan": 0.0,
+    "start_ms": 90.0,
+    "dur_ms": 650.0
+  },
+  {
+    "op": "set_envelope",
+    "voice": "tone0",
+    "attack_ms": null,
+    "decay_ms": null,
+    "sustain": null,
+    "release_ms": null,
+    "env": "punch"
+  },
+  {
+    "op": "set_envelope",
+    "voice": "tone1",
+    "attack_ms": null,
+    "decay_ms": null,
+    "sustain": null,
+    "release_ms": null,
+    "env": "punch"
+  },
+  {
+    "op": "set_envelope",
+    "voice": "tone2",
+    "attack_ms": null,
+    "decay_ms": null,
+    "sustain": null,
+    "release_ms": null,
+    "env": "punch"
+  },
+  {
+    "op": "set_pitch",
+    "voice": "tone0",
+    "slide_to_hz": 55.0,
+    "over_ms": 550.0
+  },
+  {
+    "op": "add_fm",
+    "voice": "tone1",
+    "carrier": 1.0,
+    "modulator": 1.41,
+    "index": 0.7
+  }
+]

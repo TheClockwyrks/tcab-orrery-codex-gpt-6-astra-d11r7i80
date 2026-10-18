@@ -1,0 +1,1 @@
+[{"op": "stroke_circle", "cx": 12, "cy": 12, "r": 7, "color": "#ead0a1ff"}, {"op": "stroke_circle", "cx": 12, "cy": 12, "r": 2, "color": "#ead0a1ff"}, {"op": "line", "x0": 19, "y0": 5, "x1": 19, "y1": 11, "color": "#ead0a1ff"}, {"op": "line", "x0": 19, "y0": 5, "x1": 14, "y1": 5, "color": "#ead0a1ff"}]

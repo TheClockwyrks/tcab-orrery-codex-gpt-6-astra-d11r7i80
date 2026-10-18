@@ -1,0 +1,344 @@
+[
+  {
+    "op": "set_tempo",
+    "bpm": 60
+  },
+  {
+    "op": "define_track",
+    "name": "glass",
+    "instrument": "sine"
+  },
+  {
+    "op": "define_track",
+    "name": "brass",
+    "instrument": "triangle"
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 69,
+    "t_beats": 0.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "brass",
+    "pitch": 45,
+    "t_beats": 0.0,
+    "dur_beats": 3.8,
+    "velocity": 22
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 76,
+    "t_beats": 1.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 81,
+    "t_beats": 2.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 73,
+    "t_beats": 3.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 76,
+    "t_beats": 4.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "brass",
+    "pitch": 42,
+    "t_beats": 4.0,
+    "dur_beats": 3.8,
+    "velocity": 22
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 68,
+    "t_beats": 5.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 71,
+    "t_beats": 6.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 76,
+    "t_beats": 7.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 69,
+    "t_beats": 8.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "brass",
+    "pitch": 38,
+    "t_beats": 8.0,
+    "dur_beats": 3.8,
+    "velocity": 22
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 76,
+    "t_beats": 9.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 81,
+    "t_beats": 10.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 73,
+    "t_beats": 11.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 76,
+    "t_beats": 12.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "brass",
+    "pitch": 40,
+    "t_beats": 12.0,
+    "dur_beats": 3.8,
+    "velocity": 22
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 68,
+    "t_beats": 13.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 71,
+    "t_beats": 14.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 76,
+    "t_beats": 15.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 69,
+    "t_beats": 16.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "brass",
+    "pitch": 45,
+    "t_beats": 16.0,
+    "dur_beats": 3.8,
+    "velocity": 22
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 76,
+    "t_beats": 17.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 81,
+    "t_beats": 18.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 73,
+    "t_beats": 19.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 76,
+    "t_beats": 20.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "brass",
+    "pitch": 42,
+    "t_beats": 20.0,
+    "dur_beats": 3.8,
+    "velocity": 22
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 68,
+    "t_beats": 21.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 71,
+    "t_beats": 22.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 76,
+    "t_beats": 23.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 69,
+    "t_beats": 24.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "brass",
+    "pitch": 38,
+    "t_beats": 24.0,
+    "dur_beats": 3.8,
+    "velocity": 22
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 76,
+    "t_beats": 25.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 81,
+    "t_beats": 26.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 73,
+    "t_beats": 27.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 76,
+    "t_beats": 28.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "brass",
+    "pitch": 40,
+    "t_beats": 28.0,
+    "dur_beats": 3.8,
+    "velocity": 22
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 68,
+    "t_beats": 29.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 71,
+    "t_beats": 30.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "add_note",
+    "track": "glass",
+    "pitch": 76,
+    "t_beats": 31.0,
+    "dur_beats": 0.8,
+    "velocity": 28
+  },
+  {
+    "op": "set_track_fx",
+    "track": "glass",
+    "gain": -10.0,
+    "pan": 0.22,
+    "reverb": null,
+    "env": "pluck"
+  }
+]

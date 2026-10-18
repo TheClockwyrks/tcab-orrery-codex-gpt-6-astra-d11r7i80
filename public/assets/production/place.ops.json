@@ -1,0 +1,66 @@
+[
+  {
+    "op": "add_voice",
+    "name": "tone0",
+    "wave": "sine",
+    "freq": 880.0,
+    "gain": -20.0,
+    "pan": 0.0,
+    "start_ms": 0.0,
+    "dur_ms": 150.0
+  },
+  {
+    "op": "add_voice",
+    "name": "tone1",
+    "wave": "sine",
+    "freq": 1768.7999999999995,
+    "gain": -27.0,
+    "pan": 0.0,
+    "start_ms": 45.0,
+    "dur_ms": 150.0
+  },
+  {
+    "op": "add_voice",
+    "name": "tone2",
+    "wave": "sine",
+    "freq": 3511.2000000000003,
+    "gain": -34.0,
+    "pan": 0.0,
+    "start_ms": 90.0,
+    "dur_ms": 150.0
+  },
+  {
+    "op": "set_envelope",
+    "voice": "tone0",
+    "attack_ms": null,
+    "decay_ms": null,
+    "sustain": null,
+    "release_ms": null,
+    "env": "pluck"
+  },
+  {
+    "op": "set_envelope",
+    "voice": "tone1",
+    "attack_ms": null,
+    "decay_ms": null,
+    "sustain": null,
+    "release_ms": null,
+    "env": "pluck"
+  },
+  {
+    "op": "set_envelope",
+    "voice": "tone2",
+    "attack_ms": null,
+    "decay_ms": null,
+    "sustain": null,
+    "release_ms": null,
+    "env": "pluck"
+  },
+  {
+    "op": "add_fm",
+    "voice": "tone0",
+    "carrier": 1.0,
+    "modulator": 2.7,
+    "index": 0.2
+  }
+]

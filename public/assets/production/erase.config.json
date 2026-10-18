@@ -1,0 +1,1 @@
+{"sample_rate": 22050, "channels": "stereo", "max_duration_ms": 620, "seed": 42, "actions": "/work/assets/production/erase.ops.json", "preview": "/tmp/erase.png", "wav": "/work/assets/audio/erase.wav"}

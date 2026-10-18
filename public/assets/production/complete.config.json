@@ -1,0 +1,1 @@
+{"sample_rate": 22050, "channels": "stereo", "max_duration_ms": 1900, "seed": 42, "actions": "/work/assets/production/complete.ops.json", "preview": "/tmp/complete.png", "wav": "/work/assets/audio/complete.wav"}

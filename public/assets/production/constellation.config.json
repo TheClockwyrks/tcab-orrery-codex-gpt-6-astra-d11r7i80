@@ -1,0 +1,1 @@
+{"sample_rate": 22050, "channels": "stereo", "max_duration_ms": 1100, "seed": 42, "actions": "/work/assets/production/constellation.ops.json", "preview": "/tmp/constellation.png", "wav": "/work/assets/audio/constellation.wav"}

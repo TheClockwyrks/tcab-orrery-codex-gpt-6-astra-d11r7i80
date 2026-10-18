@@ -1,0 +1,1 @@
+{"sample_rate": 22050, "channels": "stereo", "max_duration_ms": 650, "seed": 42, "actions": "/work/assets/production/place.ops.json", "preview": "/tmp/place.png", "wav": "/work/assets/audio/place.wav"}
